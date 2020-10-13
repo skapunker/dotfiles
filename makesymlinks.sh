@@ -34,7 +34,8 @@ install_zsh () {
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
+      # Using sudo to avoid password prompt, works because user has sudo privs without password input  
+      sudo chsh -s $(which zsh) $USER
     fi
     # Install oh-my-zsh if it's missing:
     if [[ ! -d $dir/.oh-my-zsh/ ]]; then
@@ -53,14 +54,6 @@ else
             sudo apt-get install zsh -y
             install_zsh
         fi
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
-    fi
-    # Install oh-my-zsh if it's missing:
-   if [[ ! -d $dir/.oh-my-zsh/ ]]; then
-       sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-   fi
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
         echo "Please install zsh, then re-run this script!"
