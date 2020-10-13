@@ -23,4 +23,4 @@ if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # Alternative p10k file for use if custom fonts (powerline or nerd-fonts) are available in terminal.
-[[ ! -f ~/.p10k.zsh.custom ]] || source ~/.p10k.zsh.custom
+#[[ ! -f ~/.p10k.zsh.custom ]] || source ~/.p10k.zsh.custom
