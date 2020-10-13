@@ -39,7 +39,7 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     fi
     # Install oh-my-zsh if it's missing:
     if [[ ! -d $dir/.oh-my-zsh/ ]]; then
-        sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
     fi
 else
     # If zsh isn't installed, get the platform of the current machine
