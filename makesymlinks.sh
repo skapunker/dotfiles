@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc fonts p10k.zsh tmux.conf vim vimrc zshrc zsh_custom"    # list of files/folders to symlink in homedir
+files="bashrc fonts p10k.zsh tmux tmux.conf vim vimrc zshrc zsh_custom"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -46,7 +46,7 @@ else
             install_zsh
         fi
         if [[ -f /etc/debian_version ]]; then
-            sudo apt-get install zsh
+            sudo apt-get install zsh -y
             install_zsh
         fi
     # Set the default shell to zsh if it isn't currently set to zsh
