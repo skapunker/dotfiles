@@ -17,7 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf'
-Plugin 'junegunn/goyo'
+Plugin 'junegunn/goyo.vim'
 Plugin 'preservim/nerdtree'
 
 " All of your Plugins must be added before the following line
