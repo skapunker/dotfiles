@@ -64,3 +64,12 @@ fi
 
 install_zsh
 main
+
+# Install plugins with Vundle
+vim +PluginInstall +qall
+
+# Install tmux plugins with tpm
+~/.tmux/plugins/tpm/bin/install_plugins
+
+# Switch to zsh
+exec zsh
